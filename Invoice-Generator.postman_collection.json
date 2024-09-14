@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "3adafbbc-76d8-484b-8e4f-871529420bbd",
+		"name": "Invoice-Generator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29099056"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Sanatan Jha\", \"email\": \"jhasanatan1997@gmail.com\", \"password\":\"Sanatan$1998\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"jhasanatan1997@gmail.com\", \"password\":\"Sanatan$1998\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Products For a User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTUzZGU3YzFlMjFiMjI5MTBkY2EyOSIsImlhdCI6MTcyNjMxMDEzMiwiZXhwIjoxNzI2MzEzNzMyfQ.7hNjaCqSBa-Yg1KLgcTB_c1QRsgkydeYbpRJ8ahmlF8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"name\": \"pencils\",\r\n            \"qty\": 100,\r\n            \"rate\": 5\r\n        },\r\n        {\r\n            \"name\": \"rubber\",\r\n            \"qty\": 200,\r\n            \"rate\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Quotations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZTUzZGU3YzFlMjFiMjI5MTBkY2EyOSIsImlhdCI6MTcyNjMxNjA3MiwiZXhwIjoxNzI2MzE5NjcyfQ.DREZO4eqG96JlK_l3MLeN2DZ-5nMEaQprfkL09QKa5o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/quotations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"quotations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
