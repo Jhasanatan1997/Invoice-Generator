@@ -1,0 +1,5 @@
+Used puppeteer to generate pdf, file.io to save pdf online and generating link, used form-data library to convert pdf contents to form data before saving pdf to file.io, bcrypt to hash password, joi for data validation, jwt for authorization tokens.
+
+
+npm install - installing dependencies
+node server - starting the server
