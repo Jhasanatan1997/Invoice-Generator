@@ -5,7 +5,7 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
 const quotationRoutes = require('./routes/quotationRoutes');
-const PORT  = process.env.PORT;
+const PORT  = process.env.PORT || 5000;
 const errorHandler = require('./utils/errors/error-handler');
 
 const app = express();
