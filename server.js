@@ -21,6 +21,8 @@ app.use(bodyParser.json());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/quotations', quotationRoutes);
+
 
 //error handler
 app.use(errorHandler);

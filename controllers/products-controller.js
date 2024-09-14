@@ -1,6 +1,7 @@
 const path = require('path');
 const { generatePDF, uploadToFileIO } = require('../utils/pdfGenerator');
 const Product = require('../models/Product');
+const Quotation = require('../models/Quotation');
 const errors = require('../utils/errors/error');
 
 // Your handler function
@@ -24,6 +25,13 @@ const saveProductsAndGeneratePDF = async (req, res) => {
 
         // Construct the PDF link
         const pdfLink = await uploadToFileIO(pdfPath);
+
+        //saving generated pdfLinks to db
+        await Quotation.findOneAndUpdate(
+            { userId: req.user.id },
+            { $push: { pdfLinks: pdfLink } },
+            { upsert: true, new: true } // Create a new document if not found (upsert)
+        );
 
         return{
             status: 200,
