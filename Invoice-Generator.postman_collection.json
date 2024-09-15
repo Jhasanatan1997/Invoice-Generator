@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Sign Up",
+			"name": "Sign Up - Deployed",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -21,12 +21,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/auth/signup",
-					"protocol": "http",
+					"raw": "https://invoice-generator-sanatan-jha.onrender.com/api/auth/signup",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"invoice-generator-sanatan-jha",
+						"onrender",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"auth",
@@ -37,42 +38,7 @@
 			"response": []
 		},
 		{
-			"name": "Login",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"email\": \"jhasanatan1997@gmail.com\", \"password\":\"Sanatan$1998\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5000/api/auth/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"auth",
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Save Products For a User",
+			"name": "Save Products For a User - Deployed",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -92,12 +58,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/products",
-					"protocol": "http",
+					"raw": "https://invoice-generator-sanatan-jha.onrender.com/api/products",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"invoice-generator-sanatan-jha",
+						"onrender",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"products"
@@ -107,7 +74,7 @@
 			"response": []
 		},
 		{
-			"name": "Get All Quotations",
+			"name": "Get All Quotations - Deployed",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -127,6 +94,43 @@
 					"path": [
 						"api",
 						"quotations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN - Deployed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"jhasanatan1997@gmail.com\", \"password\":\"Sanatan$1998\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://invoice-generator-sanatan-jha.onrender.com/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"invoice-generator-sanatan-jha",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
 					]
 				}
 			},
