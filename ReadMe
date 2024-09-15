@@ -5,4 +5,6 @@ npm install - installing dependencies
 node server - starting the server
 
 
+Deployed Base URL - https://invoice-generator-sanatan-jha.onrender.com/api
+
 Postman collection file -  Invoice-Generator.postman_collection.json
